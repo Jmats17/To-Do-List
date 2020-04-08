@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeB-TX-4dr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events View Controller-->
+        <scene sceneID="QWq-TY-dy7">
+            <objects>
+                <viewController id="yeB-TX-4dr" customClass="EventsViewController" customModule="Simple" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Cg-4h-3b5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="Add New Event Here..." translatesAutoresizingMaskIntoConstraints="NO" id="RVE-20-t8C">
+                                <rect key="frame" x="12" y="113" width="370" height="40"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yeB-TX-4dr" id="GK7-Vh-tHB"/>
+                                </connections>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0zp-Nl-qOf">
+                                <rect key="frame" x="0.0" y="161" width="414" height="715"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventsCell" rowHeight="78" id="VBA-lC-ftH" customClass="EventCell" customModule="Simple" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VBA-lC-ftH" id="iSl-q8-OhD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbE-mq-MoR">
+                                                    <rect key="frame" x="20" y="19" width="374" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-Xr-oBv">
+                                                    <rect key="frame" x="20" y="47.5" width="31" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="NdV-Xr-oBv" firstAttribute="leading" secondItem="QbE-mq-MoR" secondAttribute="leading" id="3Gk-6D-6ai"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QbE-mq-MoR" secondAttribute="trailing" id="aSJ-8S-dGR"/>
+                                                <constraint firstItem="QbE-mq-MoR" firstAttribute="top" secondItem="iSl-q8-OhD" secondAttribute="topMargin" constant="8" id="h81-U8-hS6"/>
+                                                <constraint firstItem="NdV-Xr-oBv" firstAttribute="top" secondItem="QbE-mq-MoR" secondAttribute="bottom" constant="8" id="n2p-Dd-CKr"/>
+                                                <constraint firstItem="QbE-mq-MoR" firstAttribute="leading" secondItem="iSl-q8-OhD" secondAttribute="leading" constant="20" id="uOn-xn-lGJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="NdV-Xr-oBv" secondAttribute="bottom" constant="16" id="wSy-Zz-X5W"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dateLbl" destination="NdV-Xr-oBv" id="03q-V2-eXp"/>
+                                            <outlet property="todoLbl" destination="QbE-mq-MoR" id="ExN-cH-IIL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yeB-TX-4dr" id="BWo-jy-cBc"/>
+                                    <outlet property="delegate" destination="yeB-TX-4dr" id="kMJ-St-fQH"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todays Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfj-tb-88F">
+                                <rect key="frame" x="16" y="68" width="138.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0zp-Nl-qOf" firstAttribute="top" secondItem="RVE-20-t8C" secondAttribute="bottom" priority="250" constant="8" id="3Lb-Bb-RQi"/>
+                            <constraint firstItem="Pfj-tb-88F" firstAttribute="top" secondItem="L28-ck-PBb" secondAttribute="top" constant="24" id="99w-hw-3B9"/>
+                            <constraint firstItem="Pfj-tb-88F" firstAttribute="leading" secondItem="L28-ck-PBb" secondAttribute="leading" constant="16" id="GPG-BF-CaP"/>
+                            <constraint firstItem="RVE-20-t8C" firstAttribute="top" secondItem="Pfj-tb-88F" secondAttribute="bottom" constant="16" id="TEs-Nr-Dct"/>
+                            <constraint firstItem="RVE-20-t8C" firstAttribute="leading" secondItem="L28-ck-PBb" secondAttribute="leading" constant="12" id="Tyg-T0-9ut"/>
+                            <constraint firstItem="0zp-Nl-qOf" firstAttribute="leading" secondItem="L28-ck-PBb" secondAttribute="leading" id="WE3-zk-vsi"/>
+                            <constraint firstItem="L28-ck-PBb" firstAttribute="trailing" secondItem="RVE-20-t8C" secondAttribute="trailing" constant="32" id="gfP-z6-5na"/>
+                            <constraint firstAttribute="bottom" secondItem="0zp-Nl-qOf" secondAttribute="bottom" constant="20" symbolic="YES" id="i9B-h1-cxq"/>
+                            <constraint firstItem="0zp-Nl-qOf" firstAttribute="trailing" secondItem="L28-ck-PBb" secondAttribute="trailing" id="wEY-IL-lgq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L28-ck-PBb"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLbl" destination="Pfj-tb-88F" id="0zc-fy-D81"/>
+                        <outlet property="newEventTextView" destination="RVE-20-t8C" id="Lgw-MK-bbG"/>
+                        <outlet property="tableView" destination="0zp-Nl-qOf" id="21X-7E-x2q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANO-tj-PAV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
